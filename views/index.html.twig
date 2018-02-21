@@ -1,29 +1,35 @@
 {% extends 'layouts/main.html.twig' %}
 
 {% block content %}
+
 <header>
-
-    <span id="phone"> 89898738399 </span>
-    <span id="ln"> <a class="languageSelected">En</a> | <a href="#">Ru</a></span>
-    <a href="#home"><img src="build/img/logo.png" alt="Aliselab"> </a>
-    <a href="#navLinks" id="navIco">&#9776;</a>
+	<div class="first">
+    	<a href="tel:89898738399" class="phone">89898738399</a>
+    	<span class="languages"><a href="/en" class="active">En</a> | <a href="/ru">Ru</a></span>
+	</div>
+	<div class="second switcher">
+    	<a href="#home"><img src="img/logo.png" alt="Aliselab"> </a>
+    	<a href="#navLinks" class="mobile">☰</a>
     
-    <nav id="navLinks">
-    
-    	{% for section, label in sections %}
-        	<a href="#{{ section }}">{{ label }}</a>
-        {% endfor %}
-    </nav>
-
+    	<nav>
+    		{% for section, label in sections %}
+        		<a href="#{{ section }}">{{ label }}</a>
+        	{% endfor %}
+    	</nav>
+    </div>
 </header>
 
-<section id="home">
+<section class="home" id="home">
 	{% include 'sections/home.html.twig' %}
 </section>
 
 {% for section, label in sections %}
-	<section id="{{ section }}">
-		{% include 'sections/' ~ section ~ '.html.twig' %}
+	<section class="{{ section }}">
+		<span class="anchor" id="{{ section }}"></span>
+		<h1>{{ label }}</h1>
+		<article>
+			{% include 'sections/' ~ section ~ '.html.twig' %}
+		</article>
 	</section>
 {% endfor %}
 
@@ -31,4 +37,5 @@
 <footer>
     All rights reserved 2018
 </footer>
+
 {% endblock %}

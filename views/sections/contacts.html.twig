@@ -1,29 +1,22 @@
-    <h2 id="contacts">Contacts</h2>
-    <span id="contactLinks">
-            <a href="#"><img src="build/img/ICons/fb.png" alt="FB"></a>
-            <a href="#"><img src="build/img/ICons/vk.png" alt="VK"></a>
-            <a href="#"><img src="build/img/ICons/gm.png" alt="Gmail"></a>
-    </span>
+<form action="/contact" method="POST">
+	<input class="input" type="text" name="name" placeholder="Имя" required/>
+	<input class="input" type="text" name="phone" placeholder="Телефон" required/>
+	<input class="input" type="email" name="email" placeholder="Мэйл" required/>
+	<div class="product">
+		<label>
+			<input type="radio" name="product" value="landing"/>
+			Визитка
+		</label>
+		<label>
+			<input type="radio" name="product" value="corporate"/>
+			Корпоративный
+		</label>
+		<label>
+			<input type="radio" name="product" value="ecommerce">
+			Интернет магазин
+		</label>
+	</div>
+	<textarea class="input" name="comments" id="comments" placeholder="Дополнительная информация"></textarea><br/>
+	<input class="sendBtn" type="submit" value="Отправить"/>
 
-    <form id="orderForm" action=" application.php" method="POST" name=" application " class="orderForm  formHidden">
-        <input class="input" type="text" name="name" placeholder="Имя" required>
-        <input class="input" type="text" name="telephone" placeholder="Телефон" required>
-        <input class="input" type="email" name="email" placeholder="Мэйл" required>
-        <div>
-            <label>
-                <input type="radio" name="product" id="orderCardR" value="orderCardR">
-                Визитка
-            </label>
-            <label>
-                <input type="radio" name="product" id="orderCorpR" value="orderCorpR">
-                Корпоративный
-            </label>
-            <label>
-                <input type="radio" name="product" id="orderShopR" value="orderShopR">
-                Интернет магазин
-            </label>
-        </div>
-        <textarea class="input" name="comments" id="comments" placeholder="Пояснения"></textarea><br>
-        <input class="sendBtn" type="submit" value="Send">
-
-    </form>
+</form>
