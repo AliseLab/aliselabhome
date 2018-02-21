@@ -1,0 +1,14 @@
+{
+	"name": "alicelab_home",
+	"version": "1.0.0",
+	"description": "AliceLab home page",
+	"author": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "*",
+		"twig": "*"
+ 	}
+}

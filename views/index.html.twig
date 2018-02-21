@@ -1,0 +1,34 @@
+{% extends 'layouts/main.html.twig' %}
+
+{% block content %}
+<header>
+
+    <span id="phone"> 89898738399 </span>
+    <span id="ln"> <a class="languageSelected">En</a> | <a href="#">Ru</a></span>
+    <a href="#home"><img src="build/img/logo.png" alt="Aliselab"> </a>
+    <a href="#navLinks" id="navIco">&#9776;</a>
+    
+    <nav id="navLinks">
+    
+    	{% for section, label in sections %}
+        	<a href="#{{ section }}">{{ label }}</a>
+        {% endfor %}
+    </nav>
+
+</header>
+
+<section id="home">
+	{% include 'sections/home.html.twig' %}
+</section>
+
+{% for section, label in sections %}
+	<section id="{{ section }}">
+		{% include 'sections/' ~ section ~ '.html.twig' %}
+	</section>
+{% endfor %}
+
+
+<footer>
+    All rights reserved 2018
+</footer>
+{% endblock %}
