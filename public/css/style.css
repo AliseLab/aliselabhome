@@ -6,8 +6,8 @@
 }
 
 body {
-	background: linear-gradient(115deg,transparent 75%,rgba(255,255,255,.8) 75%) 0 0,linear-gradient(245deg,transparent 75%,rgba(255,255,255,.8) 75%) 0 0,linear-gradient(115deg,transparent 75%,rgba(255,255,255,.8) 75%) 28px -60px,linear-gradient(245deg,transparent 75%,rgba(255,255,255,.8) 75%) 28px -60px,rgba(112,167,194,.1);
-	background-size: 60px 120px;
+	background: white;
+
 }
 
 a {
@@ -23,7 +23,7 @@ a.btn,
 button,
 input[type="submit"] {
 	display: inline-block;
-	background-color: #567ca6;
+	background-color: #02a1b3;
 	padding: 0.2em 1.3em;
 	color: white;
 	text-transform: uppercase;
@@ -34,7 +34,14 @@ input[type="submit"] {
 a.btn:hover,
 button:hover,
 input[type="submit"]:hover {
-	background-color: #02a1b3;
+	background-color: aqua;
+	cursor: pointer;
+}
+
+a.btn:focus,
+button:focus,
+input[type="submit"]:focus {
+	background-color: #02a9c2;
 	cursor: pointer;
 }
 
@@ -188,14 +195,15 @@ section.home > * {
 section.home > h1 {
 	font-size: 80px;
 	margin-top: 300px;
-	color: aqua;
+	color: white;
 	font-weight: 300;
+	text-shadow: 1px 2px 2px #000;
 }
 
 section.home > h2 {
 	font-size: 50px;
 	margin-top: 0;
-	color: silver;
+	color: aqua;
 }
 
 section.home > h3 {
