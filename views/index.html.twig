@@ -4,16 +4,19 @@
 
 <header>
 	<div class="first">
-    	<a href="tel:89898738399" class="phone">89898738399</a>
-    	<span class="languages"><a href="/en" class="active">En</a> | <a href="/ru">Ru</a></span>
+    	<a href="tel:{{ config.site.phone }}" class="phone">{{ config.site.phone }}</a>
+    	<span class="languages">
+    		{% for lang, label in languages %}
+    			<a href="/{{ lang }}" {% if lang == language %} class="active" {% endif %}>{{ label }}</a>
+    		{% endfor %}
+    	</span>
 	</div>
 	<div class="second switcher">
-    	<a href="#home"><img src="img/logo.png" alt="Aliselab"> </a>
-    	<a href="#navLinks" class="mobile">☰</a>
+    	<a href="#home"><img src="img/logo.png" alt="{{ config.site_title }}"> </a>
     
     	<nav>
-    		{% for section, label in sections %}
-        		<a href="#{{ section }}">{{ label }}</a>
+    		{% for section in config.sections %}
+        		<a href="#{{ section }}">{{ t( 'section_' ~ section ) }}</a>
         	{% endfor %}
     	</nav>
     </div>
@@ -23,10 +26,10 @@
 	{% include 'sections/home.html.twig' %}
 </section>
 
-{% for section, label in sections %}
+{% for section in config.sections %}
 	<section class="{{ section }}">
 		<span class="anchor" id="{{ section }}"></span>
-		<h1>{{ label }}</h1>
+		<h1>{{ t( 'section_' ~ section ) }}</h1>
 		<article>
 			{% include 'sections/' ~ section ~ '.html.twig' %}
 		</article>
@@ -35,7 +38,7 @@
 
 
 <footer>
-    All rights reserved 2018
+    {{ t( 'all_rights_reserved' ) }}
 </footer>
 
 {% endblock %}

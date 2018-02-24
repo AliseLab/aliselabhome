@@ -1,7 +1,7 @@
 {
-	"name": "alicelab_home",
+	"name": "aliselab_home",
 	"version": "1.0.0",
-	"description": "AliceLab home page",
+	"description": "AliseLab home page",
 	"author": "",
 	"main": "app.js",
 	"scripts": {
@@ -9,6 +9,8 @@
 	},
 	"dependencies": {
 		"express": "*",
-		"twig": "*"
+		"twig": "*",
+		"express-locale" : "*",
+		"express-translate": "*"
  	}
 }

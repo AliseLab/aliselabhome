@@ -47,10 +47,17 @@ $( document ).ready( function() {
 			}
 		}
 		clicked = false;
+		$( '.languages a' ).each( function() {
+			var href = $(this).attr( 'href' );
+			var strpos = href.indexOf( '#' );
+			if ( strpos >= 0 )
+				href = href.substring( 0, strpos );
+			$(this).attr( 'href', href + window.location.hash );
+		});
 	};
 	
 	$( window ).bind( 'hashchange', checkhash);
-	checkhash();
+	setTimeout( checkhash, 1 );
 	
 	var odd = false;
 	$( 'section' ).each( function() {
