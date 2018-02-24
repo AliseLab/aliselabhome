@@ -29,20 +29,19 @@ input[type="submit"] {
 	text-transform: uppercase;
 	text-decoration: none;
 	border: none;
+	cursor: pointer;
 }
 
 a.btn:hover,
 button:hover,
 input[type="submit"]:hover {
 	background-color: aqua;
-	cursor: pointer;
 }
 
 a.btn:focus,
 button:focus,
 input[type="submit"]:focus {
 	background-color: #02a9c2;
-	cursor: pointer;
 }
 
 .mobile {

@@ -10,8 +10,29 @@ $( document ).ready( function() {
 		});
 	});
 	
-	$( 'nav' ).on( 'click', 'a', function() {
-		clicked = true;
+	var scrolling_to = null;
+	
+	$( 'body' ).on( 'click', 'a', function() {
+		var href = $(this).attr( 'href' );
+		if ( href.substring( 0, 1 ) == '#' ) {
+			var target = $( href );
+			if ( target.length > 0 ) {
+				var target_id = target.attr( 'id' );
+				if ( scrolling_to != target_id ) {
+					scrolling_to = target_id;
+					target.attr( 'id', '' );
+					clicked = true;
+					window.location.hash = href;
+					target.attr( 'id', target_id );
+					$( 'html' ).stop().animate( {
+						scrollTop: target.offset().top,
+					}, 400, function() {
+						scrolling_to = null;
+					} );
+				}
+			}
+			return false;
+		}
 	});
 	
 	var checkhash = function() {
