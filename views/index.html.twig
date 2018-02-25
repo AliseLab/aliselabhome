@@ -12,13 +12,14 @@
     	</span>
 	</div>
 	<div class="second switcher">
-    	<a href="#home"><img src="img/logo.png" alt="{{ config.site_title }}"> </a>
+    	<a href="#home"><img class="logo" src="img/logo.png" alt="{{ config.site_title }}"> </a>
     
     	<nav>
     		{% for section in config.sections %}
         		<a href="#{{ section }}">{{ t( 'section_' ~ section ) }}</a>
         	{% endfor %}
     	</nav>
+    	<div class="clear"></div>
     </div>
 </header>
 

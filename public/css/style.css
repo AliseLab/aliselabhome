@@ -5,6 +5,10 @@
 	font-weight: 300;
 }
 
+img.logo {
+	height: 4.5em;
+}
+
 body {
 	background: white;
 
@@ -58,8 +62,8 @@ section {
 	margin: 0 auto;
 	background: white;
 	overflow: hidden;
-	padding: 8px 24px;
-	padding-bottom: 32px;
+	padding: 0.8em 2.4em;
+	padding-bottom: 3.2em;
 }
 
 .odd {
@@ -72,9 +76,13 @@ section a.btn {
 	font-size: 1.4em;
 }
 
+section h3 {
+	font-size: 1.7em;
+}
+
 section .anchor {
 	position: relative;
-	top: -90px;
+	top: -6.5em;
 }
 
 section .left,
@@ -103,7 +111,7 @@ section > h1 {
 
 header > .first {
 	background-color: rgba( 12, 42, 65, 0.9 );
-	padding: 4px 6px;
+	padding: 0.2em 6px;
 	color: white;
 	font-size: 1.2em;
 }
@@ -141,7 +149,7 @@ header > .second nav a {
 	color: white;
 	font-size: 1.2rem;
 	display: inline-block;
-	margin: 1.2em 12px;
+	margin: 1.3em 0.5em;
 	text-decoration: none;
 }
 
@@ -176,7 +184,6 @@ header > .second nav a.active::after {
 section.home {
 	box-sizing: border-box;
 	height: 100vh;
-	min-height: 800px;
 	background-image: url('/img/home_bg.jpg');
 	background-size: 100% 100%;
 	background-attachment: fixed;
@@ -192,7 +199,7 @@ section.home > * {
 }
 
 section.home > h1 {
-	font-size: 80px;
+	font-size: 4em;
 	margin-top: 300px;
 	color: white;
 	font-weight: 300;
@@ -200,14 +207,14 @@ section.home > h1 {
 }
 
 section.home > h2 {
-	font-size: 50px;
+	font-size: 3.2em;
 	margin-top: 0;
 	color: aqua;
 }
 
 section.home > h3 {
 	margin-top: 20px;
-	font-size: 35px;
+	font-size: 2em;
 }
 
 /* SERVICES */

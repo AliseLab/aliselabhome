@@ -11,6 +11,6 @@ exports.config = {
 	},
 	
 	sections: [
-		'about', 'services', 'portfolio', 'reviews', 'questions', 'contacts',
+		'about', 'services', 'portfolio', /*'reviews',*/ 'questions', 'contacts',
 	],
 };
