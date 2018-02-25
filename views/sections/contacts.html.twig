@@ -1,23 +1,25 @@
-<form action="/contact" method="POST">
+<form autocomplete="off" action="/contact" method="POST">
 	<input type="hidden" name="lang" value="{{ language }}"/>
 	<input class="input" type="text" name="name" placeholder="Имя" required/>
 	<input class="input" type="text" name="phone" placeholder="Телефон" required/>
 	<input class="input" type="email" name="email" placeholder="Мэйл" required/>
-	<div class="product">
+	<span class="product">
 		<label>
-			<input type="radio" name="product" value="landing"/>
+			<input type="radio" name="product" value="landing" required/>
 			Визитка
 		</label>
 		<label>
-			<input type="radio" name="product" value="corporate"/>
+			<input type="radio" name="product" value="corporate" required/>
 			Корпоративный
 		</label>
 		<label>
-			<input type="radio" name="product" value="ecommerce">
+			<input type="radio" name="product" value="ecommerce" required/>
 			Интернет магазин
 		</label>
-	</div>
-	<textarea class="input" name="comments" id="comments" placeholder="Дополнительная информация"></textarea><br/>
+	</span>
+	<textarea class="input" name="comments" id="comments" placeholder="Дополнительная информация" required></textarea><br/>
 	<input class="sendBtn" type="submit" value="Отправить"/>
 
 </form>
+
+
