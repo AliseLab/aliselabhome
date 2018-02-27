@@ -13,4 +13,16 @@ exports.config = {
 	sections: [
 		'about', 'services', 'portfolio', /*'reviews',*/ 'questions', 'contacts',
 	],
+
+	mail: {
+		transport: {
+			service: 'gmail',
+			auth: {
+				user: 'youremail@gmail.com',
+				pass: 'yourpassword',
+			},
+		},
+		destination: 'myemail@gmail.com',
+	},
+}
 };

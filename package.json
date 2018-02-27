@@ -11,6 +11,7 @@
 		"express": "*",
 		"twig": "*",
 		"express-locale" : "*",
-		"express-translate": "*"
+		"express-translate": "*",
+		"nodemailer": "*"
  	}
 }

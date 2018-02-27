@@ -81,5 +81,9 @@ Fs.readdir( './messages', (err, files) => {
 		console.log( 'listening on ' + config.server.port )
 	} );
 
+	app.post( '/contact', function( req, res ) {
+		console.log( res );
+	});
+	
 });
 
