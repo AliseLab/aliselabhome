@@ -35,6 +35,9 @@ Fs.readdir( './messages', (err, files) => {
 	var set_locale = function ( req, res, next ) {
 		var selected_language = config.site.default_language;
 		var lang = req.url.substring( 1 );
+		var i = lang.indexOf( '?' );
+		if ( i >= 0 )
+			lang = lang.substring( 0, i );
 		if ( lang.length > 0 ) {
 			if ( languages[ lang ] )
 				selected_language = lang;
@@ -53,6 +56,7 @@ Fs.readdir( './messages', (err, files) => {
 			'languages' : languages,
 			'language' : req.locale.toString(),
 			'config' : config,
+			'mailresult' : req.query.mailresult,
 		});
 	}
 	app.get( '/', function( req, res ) {
@@ -81,8 +85,47 @@ Fs.readdir( './messages', (err, files) => {
 		console.log( 'listening on ' + config.server.port )
 	} );
 
+	var BodyParser = require( 'body-parser' );
+	app.use( BodyParser.urlencoded( {
+		extended: false,
+	} ));
+	
 	app.post( '/contact', function( req, res ) {
-		console.log( res );
+		
+		var nodemailer = require( 'nodemailer' );
+		var transporter = nodemailer.createTransport( config.mail.transport );
+		
+		var title = 'Aliselab contact from ' + req.body.email;
+		
+		Twig.renderFile( './views/mail.html.twig', {
+			title: title,
+			data: req.body
+		}, ( err, html ) => {
+			
+			var data = html;
+			
+			var mailOptions = {
+				from: req.body.email,
+				to: config.mail.destination,
+				subject: title,
+				html: data,
+			};
+			
+			transporter.sendMail( mailOptions, function( error, info ) {
+				url = '/' + req.body.lang + '?mailresult=';
+				if ( error ) {
+					console.log( error );
+					url += 'error';
+				} else {
+					console.log( 'Email sent: ' + info.response );
+					url += 'success';
+				}
+				url += '#contacts';
+				res.redirect( url );
+			}); 
+			
+		});
+		
 	});
 	
 });

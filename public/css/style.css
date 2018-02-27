@@ -272,6 +272,7 @@ section.contacts {
 	padding:.6em;
 	margin:0;
 	max-width:100%;
+	text-align:center;
 }
 
 section.contacts h1 {
@@ -332,7 +333,25 @@ section.contacts form div{
 section.contacts form .product label {
 	font-size:1.3em;
 }
-	
+
+section.contacts .message {
+	background: rgba( 255, 255, 255, 0.5 );
+	padding: 2em 7em;
+	display: inline-block;
+	margin-top: 2em;
+	font-size: 1.3em;
+}
+
+section.contacts .message.error {
+	border:1px solid red;
+	color: maroon;
+}
+
+section.contacts .message.success {
+	border:1px solid lime;
+	color: green;
+}
+
 /* FOOTER */
 
 footer {

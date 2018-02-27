@@ -12,6 +12,7 @@
 		"twig": "*",
 		"express-locale" : "*",
 		"express-translate": "*",
-		"nodemailer": "*"
+		"nodemailer": "*",
+		"body-parser": "*"
  	}
 }

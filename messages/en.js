@@ -79,6 +79,18 @@ exports.trans = {
 		</div>\
 	',
 
+	// CONTACTS
+	contacts_name: 'Имя',
+	contacts_phone: 'Телефон',
+	contacts_email: 'E-Mail',
+	contacts_landing: 'Визитка',
+	contacts_corporate: 'Корпоративный',
+	contacts_ecommerce: 'Интернет магазин',
+	contacts_comments: 'Дополнительная информация',
+	contacts_send: 'Отправить',
+	contacts_mailresult_success: 'Спасибо, форма отправлена, свяжемся в ближайшее время!',
+	contacts_mailresult_error: 'Ошибка отправки формы, напишите нам сами на <a href="mailto:${email}">${email}</a>',
+	
 	// footer
 	all_rights_reserved: 'All rights reserved 2018',
 };

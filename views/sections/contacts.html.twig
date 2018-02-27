@@ -1,25 +1,31 @@
+{% if mailresult %}
+<div class="message {{ mailresult }}">
+	{{ t( 'contacts_mailresult_' ~ mailresult, { 'email': config.mail.destination } ) }}
+</div>
+{% else %}
+
 <form autocomplete="off" action="/contact" method="POST">
 	<input type="hidden" name="lang" value="{{ language }}"/>
-	<input class="input" type="text" name="name" placeholder="Имя" required/>
-	<input class="input" type="text" name="phone" placeholder="Телефон" required/>
-	<input class="input" type="email" name="email" placeholder="Мэйл" required/>
+	<input class="input" type="text" name="name" placeholder="{{ t( 'contacts_name' ) }}" required/>
+	<input class="input" type="text" name="phone" placeholder="{{ t( 'contacts_phone' ) }}" required/>
+	<input class="input" type="email" name="email" placeholder="{{ t( 'contacts_email' ) }}" required/>
 	<span class="product">
 		<label>
 			<input type="radio" name="product" value="landing" required/>
-			Визитка
+			{{ t( 'contacts_landing' ) }}
 		</label>
 		<label>
 			<input type="radio" name="product" value="corporate" required/>
-			Корпоративный
+			{{ t( 'contacts_corporate' ) }}
 		</label>
 		<label>
 			<input type="radio" name="product" value="ecommerce" required/>
-			Интернет магазин
+			{{ t( 'contacts_ecommerce' ) }}
 		</label>
 	</span>
-	<textarea class="input" name="comments" id="comments" placeholder="Дополнительная информация" required></textarea><br/>
-	<input class="sendBtn" type="submit" value="Отправить"/>
+	<textarea class="input" name="comments" id="comments" placeholder="{{ t( 'contacts_comments' ) }}" required></textarea><br/>
+	<input class="sendBtn" type="submit" value="{{ t( 'contacts_send' ) }}"/>
 
 </form>
 
-
+{% endif %}
