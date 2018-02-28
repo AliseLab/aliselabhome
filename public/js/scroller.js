@@ -2,14 +2,6 @@ $( document ).ready( function() {
 	
 	var clicked = false;
 	
-	$( '.switcher' ).each( function() {
-		var switcher = $(this);
-		switcher.on( 'click', 'a', function() {
-			switcher.find( 'a' ).removeClass( 'active' );
-			$(this).addClass( 'active' );
-		});
-	});
-	
 	var scrolling_to = null;
 	
 	$( 'body' ).on( 'click', 'a', function() {
@@ -58,21 +50,5 @@ $( document ).ready( function() {
 	
 	$( window ).bind( 'hashchange', checkhash);
 	setTimeout( checkhash, 1 );
-	
-	var odd = false;
-	$( 'section' ).each( function() {
-		odd = !odd;
-		if ( odd )
-			$(this).addClass( 'odd' );
-	});
-	
-	$( 'section.portfolio a' ).each( function() {
-		var a = $(this);
-		var href = a.attr( 'href' );
-		var img = $('<img/>');
-		img.attr( 'src', href.replace( /portfolio/, '/portfolio/preview/' ) );
-		img.appendTo( a );
-		a.attr( 'target', '_blank' );
-	});
 	
 });

@@ -18,115 +18,121 @@ Twig.cache( false );
 var languages = {};
 var messages = {};
 Fs.readdir( './messages', (err, files) => {
-	files.forEach( file => {
-		if ( file.substring( file.length - 3 ) == '.js' ) {
-			var lang = file.substring( 0, file.length - 3 );
-			var msg = require( './messages/' + file );
-			languages[ lang ] = msg.label;
-			messages[ lang ] = msg.trans;
-		}
-	});
-
-	translate.addLanguages( messages );
-	
-	app.use( Express.static( 'public' ) );
-	app.use( locale );
-	
-	var set_locale = function ( req, res, next ) {
-		var selected_language = config.site.default_language;
-		var lang = req.url.substring( 1 );
-		var i = lang.indexOf( '?' );
-		if ( i >= 0 )
-			lang = lang.substring( 0, i );
-		if ( lang.length > 0 ) {
-			if ( languages[ lang ] )
-				selected_language = lang;
-			req.locale.toString = function() {
-				return selected_language;
-			}
-		}
-		next();
-	}
-	app.use( set_locale );
-	
-	app.use( translate.middleware() );
-	
-	var render_func = function( req, res ) {
-		res.render( 'index.html.twig', {
-			'languages' : languages,
-			'language' : req.locale.toString(),
-			'config' : config,
-			'mailresult' : req.query.mailresult,
-		});
-	}
-	app.get( '/', function( req, res ) {
-		var selected_language = config.site.default_language;
-		var to_try = [];
-		to_try = to_try.concat([
-			req.locale.toString(),
-			req.locale.language,
-		]);
-		to_try.some( lang => {
-			if ( languages[ lang ] ) {
-				selected_language = lang;
-				return true;
-			}
-			return false;
+	Fs.readdir( './public/js', (err, js) => {
+		Fs.readdir( './public/css', (err, css) => {
 			
-		});
-		res.redirect( '/' + selected_language );
-	});
-	
-	for ( lang in languages ) {
-		app.get( '/' + lang, render_func );
-	}
-	
-	app.listen( config.server.port, function() {
-		console.log( 'listening on ' + config.server.port )
-	} );
-
-	var BodyParser = require( 'body-parser' );
-	app.use( BodyParser.urlencoded( {
-		extended: false,
-	} ));
-	
-	app.post( '/contact', function( req, res ) {
-		
-		var nodemailer = require( 'nodemailer' );
-		var transporter = nodemailer.createTransport( config.mail.transport );
-		
-		var title = 'Aliselab contact from ' + req.body.email;
-		
-		Twig.renderFile( './views/mail.html.twig', {
-			title: title,
-			data: req.body
-		}, ( err, html ) => {
-			
-			var data = html;
-			
-			var mailOptions = {
-				from: req.body.email,
-				to: config.mail.destination,
-				subject: title,
-				html: data,
-			};
-			
-			transporter.sendMail( mailOptions, function( error, info ) {
-				url = '/' + req.body.lang + '?mailresult=';
-				if ( error ) {
-					console.log( error );
-					url += 'error';
-				} else {
-					console.log( 'Email sent: ' + info.response );
-					url += 'success';
+			files.forEach( file => {
+				if ( file.substring( file.length - 3 ) == '.js' ) {
+					var lang = file.substring( 0, file.length - 3 );
+					var msg = require( './messages/' + file );
+					languages[ lang ] = msg.label;
+					messages[ lang ] = msg.trans;
 				}
-				url += '#contacts';
-				res.redirect( url );
-			}); 
-			
-		});
+			});
 		
+			translate.addLanguages( messages );
+			
+			app.use( Express.static( __dirname + '/public' ) );
+			app.use( locale );
+			
+			var set_locale = function ( req, res, next ) {
+				var selected_language = config.site.default_language;
+				var lang = req.url.substring( 1 );
+				var i = lang.indexOf( '?' );
+				if ( i >= 0 )
+					lang = lang.substring( 0, i );
+				if ( lang.length > 0 ) {
+					if ( languages[ lang ] )
+						selected_language = lang;
+					req.locale.toString = function() {
+						return selected_language;
+					}
+				}
+				next();
+			}
+			app.use( set_locale );
+			
+			app.use( translate.middleware() );
+			
+			var render_func = function( req, res ) {
+				res.render( 'index.html.twig', {
+					'languages' : languages,
+					'language' : req.locale.toString(),
+					'config' : config,
+					'mailresult' : req.query.mailresult,
+					'js' : js,
+					'css' : css,
+				});
+			}
+			app.get( '/', function( req, res ) {
+				var selected_language = config.site.default_language;
+				var to_try = [];
+				to_try = to_try.concat([
+					req.locale.toString(),
+					req.locale.language,
+				]);
+				to_try.some( lang => {
+					if ( languages[ lang ] ) {
+						selected_language = lang;
+						return true;
+					}
+					return false;
+					
+				});
+				res.redirect( '/' + selected_language );
+			});
+			
+			for ( lang in languages ) {
+				app.get( '/' + lang, render_func );
+			}
+			
+			app.listen( config.server.port, function() {
+				console.log( 'listening on ' + config.server.port )
+			} );
+		
+			var BodyParser = require( 'body-parser' );
+			app.use( BodyParser.urlencoded( {
+				extended: false,
+			} ));
+			
+			app.post( '/contact', function( req, res ) {
+				
+				var nodemailer = require( 'nodemailer' );
+				var transporter = nodemailer.createTransport( config.mail.transport );
+				
+				var title = 'Aliselab contact from ' + req.body.email;
+				
+				Twig.renderFile( './views/mail.html.twig', {
+					title: title,
+					data: req.body
+				}, ( err, html ) => {
+					
+					var data = html;
+					
+					var mailOptions = {
+						from: req.body.email,
+						to: config.mail.destination,
+						subject: title,
+						html: data,
+					};
+					
+					transporter.sendMail( mailOptions, function( error, info ) {
+						url = '/' + req.body.lang + '?mailresult=';
+						if ( error ) {
+							console.log( error );
+							url += 'error';
+						} else {
+							console.log( 'Email sent: ' + info.response );
+							url += 'success';
+						}
+						url += '#contacts';
+						res.redirect( url );
+					}); 
+					
+				});
+				
+			});
+		});
 	});
-	
 });
 

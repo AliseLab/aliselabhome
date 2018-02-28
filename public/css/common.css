@@ -1,0 +1,110 @@
+/* COMMON */
+
+* {
+	font-family: Verdana, sans-serif;
+	font-weight: 300;
+}
+
+img.logo {
+	height: 4.5em;
+}
+
+body {
+	background: white;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover,
+a.active {
+	text-decoration: underline;
+}
+
+a.btn,
+button,
+input[type="submit"] {
+	display: inline-block;
+	background-color: #02a1b3;
+	padding: 0.2em 1.3em;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+}
+
+a.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+	background-color: aqua;
+}
+
+a.btn:focus,
+button:focus,
+input[type="submit"]:focus {
+	background-color: #02a9c2;
+}
+
+.mobile {
+	display: none;
+}
+
+header {
+	width: 100%;
+	position: fixed;
+}
+
+section {
+	max-width: 84%;
+	margin: 0 auto;
+	background: white;
+	overflow: hidden;
+	padding: 0.8em 2.4em;
+	padding-bottom: 3.2em;
+}
+
+.odd {
+	background-color: #eeeef5;
+}
+
+section p,
+section ul,
+section ol,
+section a.btn {
+	font-size: 1.4em;
+}
+
+section h3 {
+	font-size: 1.7em;
+}
+
+section .anchor {
+	position: relative;
+	top: -6.5em;
+}
+
+section .left,
+section .right {
+	width: 49%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+section > h1 {
+	font-weight: bold;
+	color: #267;
+}
+

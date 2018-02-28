@@ -1,0 +1,9 @@
+section.portfolio article {
+	text-align: center;
+}
+
+section.portfolio article img {
+	width: 300px;
+	height: 168px;
+	margin: 6px;
+}

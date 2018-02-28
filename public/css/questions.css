@@ -1,0 +1,12 @@
+section.questions div {
+	padding: 10px 20px;
+}
+
+section.questions div > h2 {
+	color: teal;
+	font-weight: normal;
+}
+
+section.questions div > p {
+	text-indent: 20px;
+}

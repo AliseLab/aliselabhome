@@ -1,0 +1,88 @@
+section.contacts {
+	height: 90vh;
+	background-image:url("/img/home_bg.jpg");
+	background-size:100% 100%;
+	background-attachment:fixed;
+	align-items:center;
+	padding:.6em;
+	margin:0;
+	max-width:100%;
+	text-align:center;
+}
+
+section.contacts h1 {
+	color:#fff;
+	text-align: center;
+}
+
+section.contacts .input {
+	border:1px solid rgba(255,255,255,0.8);
+	background-color:rgba(255,255,255,0.2);
+	padding:.7em;
+	color:white;
+	font-weight:700;
+	font-size: 1.3em;
+	transition:background-color .3s,border .3s;
+	box-sizing:border-box;
+}
+
+section.contacts .input:hover,
+section.contacts .input:active {
+	background-color:rgba(2,201,224,0.2);
+	border-color:rgba(2,201,224,0.8);
+}
+
+section.contacts form {
+	max-width:80%;
+	width:1000px;
+	box-sizing:border-box;
+	display:flex;
+	align-items:stretch;
+	flex-direction:column;
+	margin:0 auto;
+	text-align:center;
+	padding: 4px;
+}
+
+section.contacts form textarea {
+	height:7em;
+}
+
+section.contacts form .sendBtn {
+	padding: 0.4em 0;
+	font-size: 1.4em;
+	width: 50%;
+	margin: 0 auto;
+}
+
+section.contacts form * {
+	margin:.6em;
+	color:#fff;
+}
+
+section.contacts form div{
+	display:flex;
+	flex-direction:row;
+}
+
+section.contacts form .product label {
+	font-size:1.3em;
+}
+
+section.contacts .message {
+	background: rgba( 255, 255, 255, 0.5 );
+	padding: 2em 7em;
+	display: inline-block;
+	margin-top: 2em;
+	font-size: 1.3em;
+}
+
+section.contacts .message.error {
+	border:1px solid red;
+	color: maroon;
+}
+
+section.contacts .message.success {
+	border:1px solid lime;
+	color: green;
+}

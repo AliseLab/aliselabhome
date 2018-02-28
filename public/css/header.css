@@ -1,0 +1,67 @@
+header > .first {
+	background-color: rgba( 12, 42, 65, 0.9 );
+	padding: 0.2em 6px;
+	color: white;
+	font-size: 1.2em;
+}
+
+header > .first .phone {
+	margin-left: 40px;
+}
+
+header > .first .languages {
+	float: right;
+	margin-right: 40px;
+}
+
+header > .first a {
+	color: #eee;
+}
+
+header > .first a:hover,
+header > .first a.active {
+	color: white;
+}
+
+header > .second {
+	background-color: rgba(36,36,36,0.9);
+	padding: 0 3%;
+}
+
+header > .second nav {
+	float: right;
+}
+
+header > .second nav a {
+	color: white;
+	font-size: 1.2rem;
+	display: inline-block;
+	margin: 1.3em 0.5em;
+	text-decoration: none;
+}
+
+header > .second nav a:hover,
+header > .second nav a.active {
+	color: aqua;
+}
+
+header > .second nav a::after {
+	content: '';
+	display: block;
+	margin-top: .2em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 0;
+	height: 3px;
+	background: #02c9e0;
+	transition: width .3s;
+}
+
+header > .second nav a:hover::after,
+header > .second nav a.active::after {
+	width: 100%;
+}
+
+header > .second nav a.active::after {
+	height: 5px;
+}
