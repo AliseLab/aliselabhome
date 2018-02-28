@@ -1,17 +1,17 @@
 exports.label = 'Ru';
 exports.trans = {
 
-	section_about: 'About us',
-	section_services: 'Services and prices',
-	section_portfolio: 'Portfolio',
-	section_reviews: 'Reviews',
-	section_questions: 'Questions',
-	section_contacts: 'Contacts',
+	section_about: 'О нас',
+	section_services: 'Услоги и цены',
+	section_portfolio: 'Портфолио',
+	section_reviews: 'Отзывы',
+	section_questions: 'Вопросы',
+	section_contacts: 'Контакты',
 	
 	// HOME
-	home_web_development: 'Web Development',
-	home_wanna_website: 'Wanna website?',
-	home_order_now: 'Order Now!',
+	home_web_development: 'ВЕБ-РАЗРАБОТКА',
+	home_wanna_website: 'Хотите веб-сайт?',
+	home_order_now: 'Заказать!',
 	
 	// ABOUT US
 	about_us_1:
@@ -22,7 +22,7 @@ exports.trans = {
 			имел высокое качество, так как сайт не только представляет клиента, но так же является нашей рекламой.\
 		</p>',
 	about_us_2:
-		'<h3>Преимущества работы с нами</h3>\
+		'<h3>1111Преимущества работы с нами</h3>\
 		<ol>\
 			<li>Мы предосталяем бесплатные консультации.</li>\
 			<li>Отсутствие выплат налогов, как в случае со штатным сотрудником, а следовально цены на услуги выгоднее.</li>\
@@ -35,11 +35,12 @@ exports.trans = {
 	about_us_3:
 		'<h3>Кому подойдет наше предложение?</h3>\
 		<ul class="list-spread">\
-			<li>klsdklsdfkl klsdflksdfklsdf sdljsdfjklsdfjkl fdskl</li>\
-			<li>klsdklsdfkl klsdflksdfklsdf sdljsdfjklsdfjkl fdskl</li>\
-			<li>klsdklsdfkl klsdflksdfklsdf sdljsdfjklsdfjkl fdskl</li>\
-			<li>klsdklsdfkl klsdflksdfklsdf sdljsdfjklsdfjkl fdskl</li>\
-			<li>klsdklsdfkl klsdflksdfklsdf sdljsdfjklsdfjkl fdskl</li>\
+			<li>Для тех, кто хочет выйти на новый уровень прибыльности бизнеса.</li>\
+			<li>Сформировать клиентску базу.</li>\
+			<li>Получить целый арсенал для мотивации клиентов.</li>\
+			<li>Тем, кто хочет автоматизировать рутинные задачи.</li>\
+			<li>Тем, кто ценит своё время. </li>\
+			<li>Тем, кто хочет добиться большей эффективности отдела продаж. </li>\
 		</ul>',
 		
 	// SERVICES
@@ -66,16 +67,22 @@ exports.trans = {
 	// QUESTIONS
 	questions: '\
 		<div>\
-			<h2>вопрос блабла ?</h2>\
-			<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Vivamus at augue imperdietor sit amet,consectetur adipiscing elit. Vivamus at augue imperdietor siterdiet</p>\
+			<h2>ЗАЧЕМ ВООБЩЕ НУЖНА ДОМАШНЯЯ СТРАНИЦА?</h2>\
+			<p> Домашняя страница – важный инструмент маркетинга в интернете, который используется для поддержания отношений с имеющимися клиентами, информирования их об актуальных событиях и услугах предприятия. Вторая важнейшая цель - для привлечения новых клиентов. Третья популярнейшая цель – поддержание образа и престижа предприятия. Четвертая популярнейшая цель – торговля. Пятая цель – оптимизация бизнес-процессов с целью уменьшения вклада какого либо предусмотренного процессом человеческого ресурса. Шестая цель – для развлечения. Седьмая популярнейшая цель – домашняя страница как бизнес-проект. </p>\
 		</div>\
 		<div>\
-			<h2>вопрос блабла ?</h2>\
-			<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Vivamus at augue imperdietor sit amet,consectetur adipiscing elit. Vivamus at augue imperdietor siterdiet</p>\
+			<h2>КАКОВ ПРОЦЕСС СОЗДАНИЯ СТРАНИЦЫ?</h2>\
+			<p>Клиент не должен разбираться в технологии производства и размещения сайта. Вы оставляете заявку или звоните нам. Наш менежер с вами связывается и вы вместе составляете техническое задание. Согласование сроков исполнения. Предоплата 50%. </p>\
 		</div>\
 		<div>\
-			<h2>вопрос блабла ?</h2>\
-			<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Vivamus at augue imperdietor sit amet,consectetur adipiscing elit. Vivamus at augue imperdietor siterdiet</p>\
+			<h2>КАК ДОЛГО ВЫ УЖЕ ЗАНИМАЕТЕСЬ РАЗРАБОТКОЙ ДОМАШНИХ СТРАНИЦ?</h2>\
+			<p>Разработкой веб-сайтов в данной отрасли мы работаем с 2014 года. </p>\
+			<h2>СКОЛЬКО ВРЕМЕНИ ЗАНИМАЕТ РАЗРАБОТКА ДОМАШНЕЙ СТРАНИЦЫ?</h2>\
+			<p>Время разработки домашней страницы зависит от объема функциональности конкретного проекта и активности вовлеченных специалистов в процессе согласования со стороны заказчика. В среднем процесс может занимать от 2 недель, до 3 месяцев. </p>\
+			<h2>КАКОВЫ ВАШИ СИЛЬНЫЕ СТОРОНЫ?</h2>\
+			<p>Используем новые технологии в дизайне. Создаем сайты в относительно быстрые сроки. Помогаем с маркетингом. </p>\
+			<h2>БУДЕТ ЛИ ДОСТУПНА ПОДДЕРЖКА ПОСЛЕ РАЗРАБОТКИ СТРАНИЦЫ?</h2>\
+			<p>Да. Бесплатная поддержка будет доспуна в течении 3 месяцев. </p>\
 		</div>\
 	',
 
@@ -92,5 +99,5 @@ exports.trans = {
 	contacts_mailresult_error: 'Ошибка отправки формы, напишите нам сами на <a href="mailto:${email}">${email}</a>',
 	
 	// footer
-	all_rights_reserved: 'All rights reserved 2018',
+	all_rights_reserved: 'Все права защищены © Aliselab 2018',
 };
