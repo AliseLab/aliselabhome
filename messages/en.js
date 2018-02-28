@@ -2,6 +2,7 @@ exports.label = 'En';
 exports.trans = {
 
 	section_about: 'About us',
+	section_forwhom: 'For whom',
 	section_services: 'Services and prices',
 	section_portfolio: 'Portfolio',
 	section_reviews: 'Reviews',

@@ -21,6 +21,9 @@ exports.config = {
 				user: 'youremail@gmail.com',
 				pass: 'yourpassword',
 			},
+			tls: {
+				rejectUnauthorized: false,
+			},
 		},
 		destination: 'myemail@gmail.com',
 	},

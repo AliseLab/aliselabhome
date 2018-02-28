@@ -72,6 +72,7 @@ section {
 
 section p,
 section ul,
+section ol,
 section a.btn {
 	font-size: 1.4em;
 }

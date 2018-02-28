@@ -10,9 +10,9 @@
 	"dependencies": {
 		"express": "*",
 		"twig": "*",
-		"express-locale" : "*",
+		"express-locale": "*",
 		"express-translate": "*",
 		"nodemailer": "*",
 		"body-parser": "*"
- 	}
+	}
 }
