@@ -16,7 +16,7 @@ $( document ).ready( function() {
 				var articlew = article.outerWidth();
 				var h1h = h1.outerHeight();
 				
-				var paddingh = ( section.outerHeight()- section.innerHeight() ) / 2;
+				var paddingh = ( section.outerHeight()- section.height() ) / 2;
 				
 				article.css( 'left', ( sectionw - articlew ) / 2 + 'px' );
 				
@@ -26,7 +26,7 @@ $( document ).ready( function() {
 				}
 				else if ( sectionh - h1h < articleh ) {
 					article.css( 'position', 'static' );
-					section.css( 'height', ( articleh + h1h ) + 'px' );
+					section.css( 'height', ( articleh + h1h + headerh ) + 'px' );
 				}
 			}
 		});
