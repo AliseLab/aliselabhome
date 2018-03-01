@@ -4,6 +4,12 @@
 </div>
 {% else %}
 
+<div class="social-icons">
+	<a class="fab fa-facebook-f" target="_blank" href="{{ config.site.social.facebook }}"></a>
+	<a class="fab fa-vk" target="_blank" href="{{ config.site.social.vkontakte }}"></a>
+	<a class="fa fa-envelope" target="_blank" href="{{ config.site.email }}"></a>
+</div>
+
 <form autocomplete="off" action="/contact" method="POST">
 	<input type="hidden" name="lang" value="{{ language }}"/>
 	<input class="input" type="text" name="name" placeholder="{{ t( 'contacts_name' ) }}" required/>

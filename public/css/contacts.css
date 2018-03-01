@@ -85,3 +85,20 @@ section.contacts .message.success {
 	border:1px solid lime;
 	color: green;
 }
+
+section.contacts .social-icons {
+	margin-bottom: 2em;
+}
+
+section.contacts .social-icons > a {
+	display: inline-block;
+	color: #5af;
+	font-size: 3em;
+	width: 1.2em;
+	margin: 0 1em;
+}
+
+section.contacts .social-icons > a:hover {
+	text-decoration: none;
+	color: #5ff;
+}

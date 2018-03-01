@@ -22,7 +22,7 @@ $( document ).ready( function() {
 				
 				if ( sectionh - h1h > articleh ) {
 					article.css( 'top', ( sectionh - articleh ) / 2 + h1h + 'px' );
-					section.css( 'height', sectionh - headerh - paddingh * 2 + 'px' );
+					section.css( 'height', sectionh - paddingh * 2 + 'px' );
 				}
 				else if ( sectionh - h1h < articleh ) {
 					article.css( 'position', 'static' );
