@@ -65,3 +65,21 @@ header > .second nav a.active::after {
 header > .second nav a.active::after {
 	height: 5px;
 }
+
+img.logo {
+	height: 4.5em;
+	margin-top: 0.1em;
+}
+
+@media screen and (max-width: 770px) {
+	img.logo {
+		height: 3.5em;
+		margin-top: 0.7em;
+	}
+}
+
+@media screen and (max-width: 740px) {
+	header > .second {
+		padding: 0;
+	}
+}
