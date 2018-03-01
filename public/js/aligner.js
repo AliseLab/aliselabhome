@@ -10,17 +10,19 @@ $( document ).ready( function() {
 				
 				article.css( 'position', 'absolute' );
 				
-				var sectionh = $( window ).height() - headerh;
+				var sectionh = $( window ).innerHeight() - headerh;
 				var sectionw = section.innerWidth();
 				var articleh = article.outerHeight();
 				var articlew = article.outerWidth();
 				var h1h = h1.outerHeight();
 				
+				var paddingh = ( section.outerHeight()- section.innerHeight() ) / 2;
+				
 				article.css( 'left', ( sectionw - articlew ) / 2 + 'px' );
 				
 				if ( sectionh - h1h > articleh ) {
-					article.css( 'top', ( sectionh - articleh - headerh ) / 2 + h1h + 'px' );
-					section.css( 'height', 'inherit' );
+					article.css( 'top', ( sectionh - articleh ) / 2 + h1h + 'px' );
+					section.css( 'height', sectionh - headerh - paddingh * 2 + 'px' );
 				}
 				else if ( sectionh - h1h < articleh ) {
 					article.css( 'position', 'static' );
