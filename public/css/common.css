@@ -65,12 +65,11 @@ section {
 	overflow: hidden;
 	padding: 0.8em 2.4em;
 	padding-bottom: 3.2em;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 }
 
 section article {
-	position: absolute;
 	max-width: 100%;
 }
 
