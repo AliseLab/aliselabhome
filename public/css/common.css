@@ -80,6 +80,17 @@ section a.btn {
 	font-size: 1.4em;
 }
 
+section ul.checkmarks {
+	list-style: none;
+}
+
+section ul.checkmarks li:before {
+  content: '✓';
+  margin-right: 0.6em;
+  font-weight: bold;
+  color: #0a0;
+}
+
 section h3 {
 	font-size: 1.7em;
 }
