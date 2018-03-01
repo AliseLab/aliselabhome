@@ -1,4 +1,7 @@
-section.reviews article img {
-	display: block;
-	margin: 0 auto;
+section.reviews article {
+	text-align: center;
+}
+
+section.reviews article iframe {
+	margin: 1em 2em;
 }

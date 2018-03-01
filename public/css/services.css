@@ -1,6 +1,43 @@
+section.services article {
+	text-align: center;
+}
+
 section.services article > div {
 	width: 30%;
+	min-width: 260px;
 	display: inline-block;
 	padding: 1%;
 	text-align: center;
+	background: #f5f5ff;
+	margin: 1em;
+}
+
+section.services article > div ul {
+	margin-top: 1em;
+}
+
+section.services article > div h2 {
+	color: #2b4b6f;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+section.services div.icon {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.618rem;
+    width: 6.854rem;
+    height: 6.854rem;
+    line-height: 6.854rem;
+    font-size: 4rem;
+    /*transition: background-color 0.3s;*/
+    background-color: #2b4b6f;
+    color: #aabdd3;
+    border-radius: 50%;
+}
+
+section.services li {
+	text-align: left;
+	font-size: 0.8em;
 }
