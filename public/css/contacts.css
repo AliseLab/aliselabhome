@@ -10,7 +10,7 @@ section.contacts {
 }
 
 section.contacts h1 {
-	color:#fff;
+	color:white;
 	text-align: center;
 }
 
@@ -92,7 +92,7 @@ section.contacts .social-icons {
 
 section.contacts .social-icons > a {
 	display: inline-block;
-	color: #5af;
+	color: aqua;
 	font-size: 3em;
 	width: 1.2em;
 	margin: 0 1em;
@@ -100,5 +100,5 @@ section.contacts .social-icons > a {
 
 section.contacts .social-icons > a:hover {
 	text-decoration: none;
-	color: #5ff;
+	color: white;
 }
