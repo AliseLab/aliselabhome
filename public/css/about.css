@@ -1,0 +1,8 @@
+section.about .fa-gem {
+	color: aqua;
+    font-size: 6em;
+    text-shadow: black 1px 1px 5.9px;
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+}
