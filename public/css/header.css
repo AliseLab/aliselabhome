@@ -25,7 +25,7 @@ header > .first a.active {
 
 header > .second {
 	background-color: rgba(36,36,36,0.9);
-	padding: 0 3%;
+	padding: 0 2%;
 }
 
 header > .second nav {
@@ -34,7 +34,7 @@ header > .second nav {
 
 header > .second nav a {
 	color: white;
-	font-size: 1.2rem;
+	font-size: 1.1em;
 	display: inline-block;
 	margin: 1.3em 0.5em;
 	text-decoration: none;

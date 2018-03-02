@@ -17,8 +17,9 @@ $( document ).ready( function() {
 				var h1h = h1.outerHeight();
 				
 				var paddingh = ( section.outerHeight()- section.height() ) / 2;
+				var paddingw = ( section.outerWidth()- section.width() ) / 2;
 				
-				article.css( 'left', ( sectionw - articlew ) / 2 + 'px' );
+				article.css( 'left', ( sectionw - articlew + paddingw ) / 2 + 'px' );
 				
 				if ( sectionh - h1h > articleh ) {
 					article.css( 'top', ( sectionh - articleh ) / 2 + h1h + 'px' );
