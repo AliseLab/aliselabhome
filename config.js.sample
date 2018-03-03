@@ -11,12 +11,12 @@ exports.config = {
 		social: {
 			facebook: 'https://www.facebook.com/AliseLabCom/',
 			vkontakte: 'https://vk.com',
-			googleplus: 'https://gmail.com',
+			email: 'myemail@gmail.com',
 		},
 	},
 	
 	sections: [
-		'about', 'services', 'portfolio', /*'reviews',*/ 'questions', 'contacts',
+		'about', 'forwhom', 'services', 'portfolio', 'reviews', 'questions', 'contacts',
 	],
 
 	mail: {
