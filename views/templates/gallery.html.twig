@@ -1,0 +1,16 @@
+<div class="gallery">
+	<div class="preview">
+		{% for image in images %}
+			<div>
+				<img src="/portfolio/images/{{ image }}"/>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="list">
+		{% for image in images %}
+			<div>
+				<img src="/portfolio/preview/{{ image }}"/>
+			</div>
+		{% endfor %}
+	</div>
+</div>

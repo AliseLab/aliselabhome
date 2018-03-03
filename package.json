@@ -8,11 +8,12 @@
 		"start": "node app.js"
 	},
 	"dependencies": {
+		"body-parser": "*",
 		"express": "*",
-		"twig": "*",
 		"express-locale": "*",
 		"express-translate": "*",
+		"node-gyp": "^3.6.2",
 		"nodemailer": "*",
-		"body-parser": "*"
+		"twig": "*"
 	}
 }

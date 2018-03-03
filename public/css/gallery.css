@@ -1,0 +1,41 @@
+.gallery {
+	margin-left: 10%;
+	height: 70vh;
+}
+
+.gallery .preview {
+	height: 50vh;
+	margin-bottom: 1em;
+	text-align: center;
+	width: 86%;
+}
+
+.gallery .preview .slick-list,
+.gallery .preview .slick-track,
+.gallery .preview .slick-slide {
+	height: 100%;
+	text-align: center;
+}
+
+.gallery .preview img {
+	max-height: 100%;
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.gallery .list {
+	width: 86%;
+}
+
+.gallery .list img {
+	width: 300px;
+	height: 168px;
+	padding: 0 0.5em;
+}
+
+.gallery .slick-prev:before,
+.gallery .slick-next:before {
+	color: aqua;
+}
+
