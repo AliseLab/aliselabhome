@@ -70,6 +70,10 @@ section {
 	position: relative;
 }
 
+section.faded {
+	opacity: 0;
+}
+
 section article {
 	max-width: 100%;
 }

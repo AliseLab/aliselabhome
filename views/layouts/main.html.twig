@@ -16,11 +16,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="vendor/slick/slick.min.js"></script>
 
+	<noscript>
+		<style>
+			.faded {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+
 </head>
 <body ondragstart="return false;" ondrop="return false;">
 
-{% block content %}
-{% endblock %}
+<div class="content">
+	{% block content %}
+	{% endblock %}
+</div>
 
 </body>
 
