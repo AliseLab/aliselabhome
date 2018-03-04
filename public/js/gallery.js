@@ -24,11 +24,53 @@ $( document ).ready( function() {
 				variableWidth: true,
 				focusOnSelect: true,
 				edgeFriction: 0,
-				autoplay: true,
-				autoplaySpeed: 3000,
+				autoplay: false,
+				autoplaySpeed: 5000,
 				asNavFor: '.preview',
 			});
 			
+			preview.on( 'mousedown', function() {
+				return false;
+			});
+
+			var clicked = false;
+			
+			preview.find( 'a' ).each( function() {
+				var a = $(this);
+				a.on( 'click', function() {
+					var lastclicked = clicked;
+					clicked = false;
+					return lastclicked;
+				});
+				var img = a.find( 'img' );
+				img.on( 'click', function() {
+					console.log( 'CLICK' );
+					clicked = true;
+				});
+			});
+			
+			
+			/*var updatepreviewdimensions = function() {
+				preview.find( 'a' ).each( function() {
+					var a = $(this);
+					a.css({
+						display: 'inline',
+						height: 'auto',
+						width: 'auto',
+					});
+					var img = a.find( 'img' );
+					a.css({
+						height: img.height() + 'px',
+						width: img.width() + 'px',
+						display: 'block',
+					});
+				});
+			};
+			
+			$( window ).on( 'resize', function() {
+				updatepreviewdimensions();
+			});
+			updatepreviewdimensions();*/
 		}
 		
 	});

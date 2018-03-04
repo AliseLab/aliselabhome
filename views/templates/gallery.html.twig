@@ -2,7 +2,9 @@
 	<div class="preview">
 		{% for image in images %}
 			<div>
-				<img src="/portfolio/images/{{ image }}"/>
+				<a target="_blank" href="/portfolio/images/{{ image }}">
+					<img src="/portfolio/images/{{ image }}"/>
+				</a>
 			</div>
 		{% endfor %}
 	</div>

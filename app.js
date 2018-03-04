@@ -27,7 +27,7 @@ var createthumbnails = function( srcpath, dstpath, next ) {
 		files.forEach( file => {
 			if ( !Fs.existsSync( dstpath + '/' + file ) ) { 
 				console.log( 'creating preview for ' + srcpath + '/' + file );
-				exec( 'convert ' + srcpath + '/' + file + ' -resize 300x168^ ' + dstpath + '/' + file, ( err, stdout, stderr ) => {
+				exec( 'convert ' + srcpath + '/' + file + ' -resize x168 ' + dstpath + '/' + file, ( err, stdout, stderr ) => {
 					if ( err ) {
 						console.log( stderr );
 						Fs.unlink( dstpath + '/' + file, () => {} );

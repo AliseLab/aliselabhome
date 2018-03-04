@@ -4,8 +4,9 @@
 }
 
 .gallery .preview {
-	height: 50vh;
-	margin-bottom: 1em;
+	height: 44vh;
+	margin-bottom: 2em;
+	margin-top: 1em;
 	text-align: center;
 	width: 86%;
 }
@@ -17,11 +18,17 @@
 	text-align: center;
 }
 
+.gallery .preview a {
+	margin: 0 auto;
+	cursor: default;
+}
+
 .gallery .preview img {
 	max-height: 100%;
 	max-width: 100%;
 	display: block;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 .gallery .list {
@@ -29,8 +36,8 @@
 }
 
 .gallery .list img {
-	width: 300px;
-	height: 168px;
+	height: 20vh;
+	max-height: 168px;
 	padding: 0 0.5em;
 }
 
