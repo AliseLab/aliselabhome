@@ -49,24 +49,16 @@ exports.trans = {
 	
 	// SERVICES
 	services_1_title: 'Landing page',
-	services_1_text: '\
-		<li>Написание продающего текста</li>\
-		<li>Разработка статического прототипа</li>\
-		<li>Разработка продающего макета</li>\
-	',
+	services_1_text: 'Landing page is one page website designed for selling specific service or product',
 	services_2_title: 'Corporate website',
-	services_2_text: '\
-		<li>Написание продающего текста</li>\
-		<li>Разработка статического прототипа</li>\
-		<li>Разработка продающего макета</li>\
-	',
+	services_2_text: 'Corporate website may contain gallery, order form, blog and small catalog',
 	services_3_title: 'E-commerce',
-	services_3_text: '\
-		<li>Написание продающего текста</li>\
-		<li>Разработка статического прототипа</li>\
-		<li>Разработка продающего макета</li>\
-	',
+	services_3_text: 'Web stores typically consist of basket, product selection filter and news page',
 	services_order_now: 'Order now',
+	services_from: 'from',
+	services_day: 'day',
+	services_week: 'week',
+	services_weeks: 'weeks',
 	
 	// QUESTIONS
 	questions: '\

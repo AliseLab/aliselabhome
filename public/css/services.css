@@ -12,8 +12,12 @@ section.services article > div {
 	margin: 1em;
 }
 
-section.services article > div ul {
-	margin-top: 1em;
+section.services article > div .time {
+	font-style: italic;
+}
+
+section.services article > div .price {
+	font-weight: bold;
 }
 
 section.services article > div h2 {
