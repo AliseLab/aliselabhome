@@ -24,7 +24,7 @@ $( document ).ready( function() {
 				variableWidth: true,
 				focusOnSelect: true,
 				edgeFriction: 0,
-				autoplay: false,
+				autoplay: true,
 				autoplaySpeed: 5000,
 				asNavFor: '.preview',
 			});
