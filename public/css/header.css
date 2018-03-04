@@ -42,7 +42,7 @@ header > .second nav a {
 
 header > .second nav a:hover,
 header > .second nav a.active {
-	color: aqua;
+	color: #01c7e1;
 }
 
 header > .second nav a::after {

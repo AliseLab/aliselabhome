@@ -43,6 +43,11 @@
 
 .gallery .slick-prev:before,
 .gallery .slick-next:before {
+	color: #01c7e1;
+}
+
+.gallery .slick-prev:before:focus,
+.gallery .slick-next:before:focus {
 	color: aqua;
 }
 

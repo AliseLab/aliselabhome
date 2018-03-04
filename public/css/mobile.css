@@ -16,7 +16,7 @@ header .mobile-menu {
 
 	header .mobile-menu:hover,
 	header .mobile-menu.active {
-		color: aqua;
+		color: #01c7e1;
 	}
 
 	header nav {

@@ -1,7 +1,7 @@
 section.about .fa-gem {
-	color: aqua;
+	color: #01c7e1;
     font-size: 1.8em;
-    text-shadow: black 1px 1px 5.9px;
+    text-shadow: black 1px 1px 1.9px;
     position: relative;
     top: 0.15em;
     margin-right: 0.3em;
@@ -31,7 +31,7 @@ section.about ul li::before {
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	color: aqua;
+	color: #01c7e1;
 	text-shadow: black 1px 1px 1px;
 	font-size: 1.7em;
 	margin-bottom: -1em;
