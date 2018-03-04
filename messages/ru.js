@@ -11,7 +11,7 @@ exports.trans = {
 	section_contacts: 'Контакты',
 	
 	// HOME
-	home_web_development: 'Разбработка сайтов',
+	home_web_development: 'Разработка сайтов',
 	home_wanna_website: 'Хотите веб-сайт?',
 	home_order_now: 'Заказать!',
 	
