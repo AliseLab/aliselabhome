@@ -20,7 +20,7 @@ exports.trans = {
 		<p>\
 			We are a small team of freelancers in web development area. We provide web development consultations,\
 			suggesting most appropriate solutions. We develop landing pages, adaptive multipage websites and\
-			web stores, основаясь на автоматизации бизнес-процессов. We do our best to ensure that every our website\
+			web stores. We do our best to ensure that every our website\
 			gets high quality, because not only it represents our customer, but also is our advertisement.\
 		</p>\
 		<h3><div class="far fa-gem"></div>Advantages of working with us:</h3>\
