@@ -1,8 +1,13 @@
 $( document ).ready( function() {
 	
-	$( 'header .mobile-menu' ).on( 'click', function() {
+	var header_minimize_min_window_height = 300;
+	var header_minimize_to_height = 20;
+	
+	var header = $( 'header' );
+	var nav = header.find( 'nav' );
+	
+	header.find( '.mobile-menu' ).on( 'click', function() {
 		var btn = $(this);
-		var nav = $( 'header nav' );
 		if ( btn.hasClass( 'active' ) ) {
 			btn.removeClass( 'active' );
 			nav.removeClass( 'mobile-visible' );
@@ -13,19 +18,72 @@ $( document ).ready( function() {
 		}
 	});
 	
-	$( 'header a' ).on( 'click', function() {
+	header.find( 'a' ).on( 'click', function() {
 		var btn = $( 'header .mobile-menu' );
 		if ( btn.hasClass( 'active' ) ) {
 			btn.removeClass( 'active' );
-			$( 'header nav' ).removeClass( 'mobile-visible' );
+			nav.removeClass( 'mobile-visible' );
 		}
 	});
 
 	var alignheader = function() {
-		$( 'header nav' ).css( 'top', $( 'header' ).outerHeight() + 'px' );
+		nav.css( 'top', header.outerHeight() + 'px' );
 	};
 	
-	$( window ).on( 'resize', alignheader );
-	alignheader();
+	var showheader = function() {
+		header.stop().removeClass( 'hiding' ).removeClass( 'hidden' ).css( {
+			top: '0px',
+		} );
+	}
+	
+	var hideheader = function( speed ) {
+		if ( !header.hasClass( 'hiding' ) ) {
+			header.addClass( 'hiding' );
+			header.stop().css( 'overflow', 'hidden' ).animate({
+				top: '-' + ( header.height() - header_minimize_to_height ) + 'px',
+			}, speed, function() {
+				header.removeClass( 'hiding' ).addClass( 'hidden' );
+			} );
+		}
+	}
+	
+	var maybehideheader = function( speed ) {
+		if (
+			$( window ).height() <= header_minimize_min_window_height &&
+			$( window ).scrollTop() > 0 &&
+			!nav.hasClass( 'mobile-visible' )
+		)
+			hideheader( speed );
+	}
+	
+	var headerclicked = false;
+	
+	$( 'body' ).on( 'mousedown', function() {
+		if ( headerclicked ) {
+			showheader();
+			headerclicked = false;
+		}
+		else
+			maybehideheader( 'fast' );
+	});
+	
+	header.on( 'mousedown', function() {
+		headerclicked = true;
+	});
+	
+	$( window ).on( 'scroll', function() {
+		if ( $( window ).scrollTop() == 0 )
+			showheader();
+		else
+			maybehideheader( 'slow' );
+	});
+	
+	var onresize = function() {
+		alignheader();
+		showheader();
+	};
+	
+	$( window ).on( 'resize', onresize );
+	onresize();
 	
 });

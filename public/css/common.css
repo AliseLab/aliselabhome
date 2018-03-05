@@ -192,3 +192,7 @@ html {
   font-weight: 100;
   opacity: 0.5;
 }
+
+header.hidden {
+	opacity: 0.5;
+}

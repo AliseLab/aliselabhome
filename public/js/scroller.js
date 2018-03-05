@@ -16,8 +16,11 @@ $( document ).ready( function() {
 					$( 'body' ).removeClass( 'hashchange' );
 					target.attr( 'id', target_id );
 					$( 'body' ).addClass( 'scrolling' );
+					var targettop = target.offset().top;
+					if ( $( window ).height() <= 300 )
+						targettop += $( 'header' ).height() - 20;
 					$( 'html, body' ).stop().animate( {
-						scrollTop: target.offset().top,
+						scrollTop: targettop,
 					}, 400, function() {
 						scrolling_to = null;
 						$( 'body' ).removeClass( 'scrolling' );
