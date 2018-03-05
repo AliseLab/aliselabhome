@@ -3,5 +3,21 @@ section.reviews article {
 }
 
 section.reviews article iframe {
-	margin: 1em 2em;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 2em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+section.reviews div.small {
+	display: none;
+}
+
+@media screen and ( max-width: 400px ) {
+	section.reviews article iframe {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 2em;
+	}
 }

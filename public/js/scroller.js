@@ -17,8 +17,10 @@ $( document ).ready( function() {
 					target.attr( 'id', target_id );
 					$( 'body' ).addClass( 'scrolling' );
 					var targettop = target.offset().top;
-					if ( $( window ).height() <= 300 )
-						targettop += $( 'header' ).height() - 20;
+					if ( $( window ).height() > 300 )
+						targettop -= $( 'header' ).height();
+					else
+						targettop -= 20;
 					$( 'html, body' ).stop().animate( {
 						scrollTop: targettop,
 					}, 400, function() {
