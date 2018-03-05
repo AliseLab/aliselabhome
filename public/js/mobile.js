@@ -33,6 +33,7 @@ $( document ).ready( function() {
 	var showheader = function() {
 		header.stop().removeClass( 'hiding' ).removeClass( 'hidden' ).css( {
 			top: '0px',
+			opacity: '1',
 		} );
 	}
 	
@@ -41,6 +42,7 @@ $( document ).ready( function() {
 			header.addClass( 'hiding' );
 			header.stop().css( 'overflow', 'hidden' ).animate({
 				top: '-' + ( header.height() - header_minimize_to_height ) + 'px',
+				opacity: '0.5',
 			}, speed, function() {
 				header.removeClass( 'hiding' ).addClass( 'hidden' );
 			} );

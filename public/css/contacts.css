@@ -66,6 +66,7 @@ section.contacts form div{
 
 section.contacts form .product label {
 	font-size:1.3em;
+	white-space: nowrap;
 }
 
 section.contacts .message {

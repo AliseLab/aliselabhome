@@ -12,6 +12,18 @@ section.services article > div {
 	margin: 1em;
 }
 
+@media screen and ( max-width: 290px ) {
+	section.services article > div {
+		min-width: 210px;
+	}
+}
+
+@media screen and ( max-width: 238px ) {
+	section.services article > div {
+		min-width: 170px;
+	}
+}
+
 section.services article > div .time {
 	font-style: italic;
 }
@@ -45,3 +57,4 @@ section.services li {
 	text-align: left;
 	font-size: 1em;
 }
+

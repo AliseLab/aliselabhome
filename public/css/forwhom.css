@@ -6,3 +6,18 @@ section.forwhom ul li {
 	font-size: 1.5em;
 	
 }
+
+@media screen and ( max-width: 530px ) {
+	section.forwhom ul li {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and ( max-width: 310px ) {
+	section.forwhom ul li {
+		margin-left: 1em;
+	}
+	section.forwhom ul li::before {
+		display: none;
+	}
+}
