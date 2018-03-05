@@ -16,7 +16,7 @@ $( document ).ready( function() {
 					$( 'body' ).removeClass( 'hashchange' );
 					target.attr( 'id', target_id );
 					$( 'body' ).addClass( 'scrolling' );
-					$( 'html' ).stop().animate( {
+					$( 'html, body' ).stop().animate( {
 						scrollTop: target.offset().top,
 					}, 400, function() {
 						scrolling_to = null;
