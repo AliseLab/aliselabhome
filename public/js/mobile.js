@@ -20,5 +20,12 @@ $( document ).ready( function() {
 			$( 'header nav' ).removeClass( 'mobile-visible' );
 		}
 	});
+
+	var alignheader = function() {
+		$( 'header nav' ).css( 'top', $( 'header' ).outerHeight() + 'px' );
+	};
+	
+	$( window ).on( 'resize', alignheader );
+	alignheader();
 	
 });

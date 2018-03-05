@@ -2,7 +2,7 @@ header .mobile-menu {
 	display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and ( max-width: 1000px ) {
 	header .mobile-menu {
 		display: block;
 		float: right;
@@ -32,16 +32,33 @@ header .mobile-menu {
 		list-style: none;
 	}
 	
-	header nav a {
+	header nav.mobile-visible a {
 		display: list-item !important;
 		text-align: center;
 		margin: 0.1em 0;
 		font-size: 1.25em !important;
 	}
 	
-	header nav a::after {
+	header nav.mobile-visible a::after {
 		display: none !important;
 	}
 	
+	@media screen and ( max-height: 356px ) {
+		header nav.mobile-visible a {
+			font-size: 0.97em !important;
+		}
+	}
+	
+	@media screen and ( max-height: 302px ) {
+		header nav.mobile-visible a {
+			font-size: 0.84em !important;
+		}
+	}
+	
+	@media screen and ( max-height: 258px ) {
+		header nav.mobile-visible a {
+			font-size: 0.64em !important;
+		}
+	}
 }
 
