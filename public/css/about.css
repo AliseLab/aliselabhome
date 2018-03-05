@@ -24,6 +24,15 @@ section.about img.quality {
 	margin-top: 10em;
 }
 
+@media screen and ( max-width: 555px ) {
+	section.about img.quality {
+		display: none;
+	}
+	section.about ul {
+		width: 86%;
+	}
+}
+
 section.about ul li::before {
 	font-family: "Font Awesome 5 Free";
 	content: "\f061";
@@ -36,3 +45,10 @@ section.about ul li::before {
 	font-size: 1.7em;
 	margin-bottom: -1em;
 }
+
+@media screen and ( max-width: 225px ) {
+	section.about ul {
+		padding-left: 1em;
+	}
+}
+

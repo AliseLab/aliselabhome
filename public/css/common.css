@@ -121,6 +121,17 @@ section > h1 {
 	color: #267;
 }
 
+@media screen and ( max-width: 400px ) {
+	section {
+		max-width: 100%;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	section > h1 {
+		text-align: center;
+	}
+}
+
 html {
 	font-size: 1em;
 }
