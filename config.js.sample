@@ -33,4 +33,6 @@ exports.config = {
 		destination: 'myemail@gmail.com',
 	},
 	
+	ga_code: '',
+	
 };
