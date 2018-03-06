@@ -15,6 +15,7 @@
 		"node-gyp": "^3.6.2",
 		"nodemailer": "*",
 		"twig": "*",
-		"express-asset-manager": "*"
+		"express-asset-manager": "*",
+		"express-minify-html": "*"
 	}
 }

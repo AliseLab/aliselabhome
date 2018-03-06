@@ -4,6 +4,22 @@ exports.run = function( data, next ) {
 	if ( data.config.debug )
 		data.twig.cache( false );
 	
+	if ( !data.config.debug ) {
+		var Minify = require( 'express-minify-html' );
+		data.app.use( Minify( {
+			override: true,
+			exception_url: false,
+			htmlMinifier: {
+				removeComments: true,
+				collapseWhitespace: true,
+				collapseBooleanAttributes: true,
+				removeAttributeQuotes: true,
+				removeEmptyAttributes: true,
+				minifyJS: true
+		    }
+		}));
+	}
+	
 	data.app.use( data.express.static( __dirname + '/../public' ) );
 	
 	data.fs.readdir( './assets/js', (err, js) => {
