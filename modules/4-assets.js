@@ -53,15 +53,15 @@ exports.run = function( data, next ) {
 
 			};
 			
+			if ( data.config.create_assets )
+				create_assets();
+			
 			if ( data.config.debug ) {
-				if ( data.config.force_create_assets )
-					create_assets();
 				data.app.use( data.express.static( __dirname + '/../assets' ) );
 				data.js = js;
 				data.css = css;
 			}
 			else {
-				create_assets();
 				data.js = [ 'app.js' ];
 				data.css = [ 'style.css' ];
 			}
