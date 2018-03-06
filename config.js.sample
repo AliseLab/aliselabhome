@@ -1,5 +1,7 @@
 exports.config = {
 
+	debug: false,
+
 	server: {
 		port: 8080,
 	},
