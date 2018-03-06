@@ -1,6 +1,7 @@
 exports.config = {
 
 	debug: true,
+	force_create_assets: true,
 
 	server: {
 		port: 8080,

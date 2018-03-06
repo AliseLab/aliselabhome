@@ -16,6 +16,7 @@
 		"nodemailer": "*",
 		"twig": "*",
 		"express-asset-manager": "*",
+		"node-minify": "*",
 		"express-minify-html": "*"
 	}
 }

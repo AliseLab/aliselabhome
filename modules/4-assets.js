@@ -25,12 +25,7 @@ exports.run = function( data, next ) {
 	data.fs.readdir( './assets/js', (err, js) => {
 		data.fs.readdir( './assets/css', (err, css) => {
 			
-			if ( data.config.debug ) {
-				data.app.use( data.express.static( __dirname + '/../assets' ) );
-				data.js = js;
-				data.css = css;
-			}
-			else {
+			var create_assets = function() {
 				var assets = {
 					'app.js' : {
 						type: 'js',
@@ -45,7 +40,7 @@ exports.run = function( data, next ) {
 						files: [ '*.css' ],
 					},
 				};
-				
+					
 				var config = {
 					rootRoute : '/',
 					srcDir : __dirname + '/../assets',
@@ -53,8 +48,20 @@ exports.run = function( data, next ) {
 					process : 'false',
 					env: 'production'
 				};
-				
+					
 				data.app.use( require( 'express-asset-manager' )( assets, config ) );
+
+			};
+			
+			if ( data.config.debug ) {
+				if ( data.config.force_create_assets )
+					create_assets();
+				data.app.use( data.express.static( __dirname + '/../assets' ) );
+				data.js = js;
+				data.css = css;
+			}
+			else {
+				create_assets();
 				data.js = [ 'app.js' ];
 				data.css = [ 'style.css' ];
 			}
