@@ -13,9 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css"/>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="vendor/slick/slick.min.js"></script>
-
 	<noscript>
 		<style>
 			.faded {
@@ -44,10 +41,13 @@
 	{% endblock %}
 </div>
 
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
 
 {% for file in js %}
 	<script src="js/{{ file }}"></script>
 {% endfor %}
+
+</body>
 
 </html>
