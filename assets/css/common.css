@@ -82,13 +82,6 @@ section article {
 	background-color: #eeeef5;
 }
 
-section p,
-section ul,
-section ol,
-section a.btn {
-	font-size: 2 em;
-}
-
 section ul.checkmarks {
 	list-style: none;
 }
