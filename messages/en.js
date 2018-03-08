@@ -23,7 +23,7 @@ exports.trans = {
 			web stores. We do our best to ensure that every our website\
 			gets high quality, because not only it represents our customer, but also is our advertisement.\
 		</p>\
-		<h3><div class="far fa-gem"></div>Advantages of working with us:</h3>\
+		<h3><span class="far fa-gem"></span>Advantages of working with us:</h3>\
 		<img src="/img/quality.png" class="quality"/>\
 		<ul>\
 			<li>We are providing free consultations.</li>\

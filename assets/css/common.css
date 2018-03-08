@@ -116,9 +116,10 @@ section .anchor {
 	clear: both;
 }
 
-section > h1 {
+section article > h1 {
 	font-weight: bold;
 	color: #267;
+	text-align: center;
 }
 
 @media screen and ( max-width: 400px ) {
@@ -126,9 +127,6 @@ section > h1 {
 		max-width: 100%;
 		padding-left: 2px;
 		padding-right: 2px;
-	}
-	section > h1 {
-		text-align: center;
 	}
 }
 

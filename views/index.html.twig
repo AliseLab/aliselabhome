@@ -12,7 +12,7 @@
     	</span>
 	</div>
 	<div class="second switcher">
-    	<a href="#home"><img class="logo" src="img/logo_text.png" alt="{{ config.site_title }}"> </a>
+    	<a href="#home"><img class="logo" src="img/logo_text.png" alt="{{ config.site.title }}"> </a>
     	<div class="mobile-menu fa fa-bars"></div>
     	<nav>
     		{% for section in config.sections %}
@@ -34,8 +34,8 @@
 	{% endif %}
 	<section data-section="{{ section }}" class="{{ section }} faded">
 		<span class="anchor" id="{{ section }}"></span>
-		<h1>{{ t( label ) }}</h1>
 		<article>
+			<h1>{{ t( label ) }}</h1>
 			{% include 'sections/' ~ section ~ '.html.twig' %}
 		</article>
 	</section>

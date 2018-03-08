@@ -8,6 +8,8 @@ section.reviews article iframe {
 	margin-bottom: 2em;
 	margin-left: 1em;
 	margin-right: 1em;
+	border: none;
+	overflow: hidden;
 }
 
 section.reviews div.small {
