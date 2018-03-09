@@ -36,6 +36,8 @@ exports.config = {
 		destination: 'myemail@gmail.com',
 	},
 	
-	ga_code: '',
+	ga_id: '',
+	metrika_id: '',
+	jivosite_id: '',
 	
 };
