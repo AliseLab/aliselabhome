@@ -11,7 +11,7 @@ exports.run = function( data, next ) {
 			files.forEach( file => {
 				if ( !data.fs.existsSync( dstpath + '/' + file ) ) { 
 					console.log( 'creating preview for ' + srcpath + '/' + file );
-					exec( 'convert ' + srcpath + '/' + file + ' -resize x168 ' + dstpath + '/' + file, ( err, stdout, stderr ) => {
+					data.exec( 'convert ' + srcpath + '/' + file + ' -resize x168 ' + dstpath + '/' + file, ( err, stdout, stderr ) => {
 						if ( err ) {
 							console.log( stderr );
 							data.fs.unlink( dstpath + '/' + file, () => {} );

@@ -5,6 +5,10 @@ header > .first {
 	font-size: 1.2em;
 }
 
+header > .first > a {
+	margin-right: 2em;
+}
+
 header > .first .phone {
 	margin-left: 40px;
 }

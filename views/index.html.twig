@@ -5,6 +5,7 @@
 <header>
 	<div class="first">
     	<a href="tel:{{ config.site.phone }}" class="phone">{{ config.site.phone }}</a>
+    	<a href="mailto:{{ config.site.social.email }}" class="email">{{ config.site.social.email }}</a>
     	<span class="languages">
     		{% for lang, label in languages %}
     			<a href="/{{ lang }}" {% if lang == language %} class="active" {% endif %}>{{ label }}</a>

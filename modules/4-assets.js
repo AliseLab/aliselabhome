@@ -33,7 +33,7 @@ exports.run = function( data, next ) {
 						main: 'app.js',
 						files: [ '*.js' ],
 					},
-					'style.css' : {
+					'app.css' : {
 						type: 'css',
 						dir: 'css',
 						main: 'style.css',
@@ -63,7 +63,7 @@ exports.run = function( data, next ) {
 			}
 			else {
 				data.js = [ 'app.js' ];
-				data.css = [ 'style.css' ];
+				data.css = [ 'app.css' ];
 			}
 			
 			next();

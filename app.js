@@ -3,6 +3,7 @@ var { exec } = require( 'child_process' );
 var data = {
 	fs: require( 'fs' ),
 	modules: {},
+	exec: exec,
 };
 
 data.fs.readdir( './modules', ( err, files ) => {
