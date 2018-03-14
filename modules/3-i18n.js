@@ -35,6 +35,7 @@ exports.run = function( data, next ) {
 					return selected_language;
 				}
 			}
+			req.language = req.locale.toString();
 			next();
 		}
 		data.app.use( locale );

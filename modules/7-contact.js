@@ -2,13 +2,14 @@ exports.run = function( data, next ) {
 	
 	var BodyParser = require( 'body-parser' );
 	var Mailer = require( 'nodemailer' );
-	var transport = Mailer.createTransport( data.config.mail.transport );
 	
 	data.app.use( BodyParser.urlencoded( {
 		extended: false,
 	} ));
 	
 	data.app.post( '/contact', function( req, res ) {
+		
+		var transport = Mailer.createTransport( data.getconfig( req.language ).mail.transport );
 		
 		var title = 'Aliselab contact from ' + req.body.email;
 		
@@ -19,7 +20,7 @@ exports.run = function( data, next ) {
 			
 			var mailOptions = {
 				from: req.body.email,
-				to: data.config.mail.destination,
+				to: data.getconfig( req.language ).mail.destination,
 				subject: title,
 				html: html,
 			};

@@ -3,8 +3,8 @@ exports.run = function( data, next ) {
 	var render_func = function( req, res ) {
 		res.render( 'index.html.twig', {
 			'languages' : data.languages,
-			'language' : req.locale.toString(),
-			'config' : data.config,
+			'language' : req.language,
+			'config' : data.getconfig( req.language ),
 			'mailresult' : req.query.mailresult,
 			'js' : data.js,
 			'css' : data.css,
