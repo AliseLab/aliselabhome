@@ -1,10 +1,10 @@
-exports.label = 'Lv';
+﻿exports.label = 'Lv';
 exports.trans = {
 
 	section_about: 'Par mums',
 	section_forwhom: 'Kam',
 	section_forwhom_title: 'Kam ir piemērots mūsu piedāvājums?',
-	section_services: 'Piedāvājumi un cents',
+	section_services: 'Piedāvājumi un cenas',
 	section_portfolio: 'Portfolio',
 	section_reviews: 'Atsauksmes',
 	section_questions: 'Jautājumi',
@@ -43,17 +43,17 @@ exports.trans = {
 		<li>Izveidot klientu bāzi.</li>\
 		<li>Iegūt veselu arsenālu ar klientu motivēšanas rīkiem.</li>\
 		<li>Tiem, kas vēlas automatizēt rutīnas uzdevumus.</li>\
-		<li>Tiem, kas novērtē savu laiku</li>\
+		<li>Tiem, kas novērtē savu laiku.</li>\
 		<li>Tiem, kas grib paaugstināt pārdošanas nodaļas efektivitāti.</li>\
 	',
 	
 	// SERVICES
 	services_1_title: 'Vizītkartes mājas lapa',
-	services_1_text: 'Vizītkartes mājas lapa, kas ir īpaši paredzēts pakalpojumu vai preču pārdošanai',
+	services_1_text: 'Vizītkartes mājas lapa, kas ir īpaši paredzēta pakalpojumu vai preču pārdošanai',
 	services_2_title: 'Korporatīvā mājas lapa',
 	services_2_text: 'Korporatīvā mājas lapa var saturēt foto galeriju, pasūtījumu veikšanas formu, blogu un nelielu katalogu',
 	services_3_title: 'Interneta veikals',
-	services_3_text: 'Interneta veikals parasti satur pirkumu grozu, preču meklēšanas filtrus un jaunt ziņu lapu',
+	services_3_text: 'Interneta veikals parasti satur pirkumu grozu, preču meklēšanas filtrus un jauna ziņu lapu',
 	services_order_now: 'Pasūtīt',
 	services_from: 'no',
 	services_day: 'dienas',
@@ -94,7 +94,7 @@ exports.trans = {
 	contacts_email: 'E-pasts',
 	contacts_landing: 'Vizītkarte',
 	contacts_corporate: 'Korporatīvais',
-	contacts_ecommerce: 'Interneta veikal',
+	contacts_ecommerce: 'Interneta veikals',
 	contacts_comments: 'Papildus informācija',
 	contacts_send: 'Nosūtīt',
 	contacts_mailresult_success: 'Paldies, pieteikums ir nosūtīts. Mēs sazināsimies ar Jums tuvākajā laikā!',
