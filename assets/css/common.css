@@ -16,7 +16,9 @@ body {
 }
 
 body > .jivo-btn {
-	display: none;
+	display: none !important;
+	opacity: 0;
+	visibility: hidden;
 }
 
 a {
