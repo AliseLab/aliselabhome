@@ -12,6 +12,10 @@ section.services article > div {
 	margin: 1em;
 }
 
+section.services article > div > p.text {
+	min-height: 6em;
+}
+
 @media screen and ( max-width: 290px ) {
 	section.services article > div {
 		min-width: 210px;
