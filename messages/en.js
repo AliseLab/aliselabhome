@@ -24,7 +24,7 @@ exports.trans = {
 			gets high quality, because not only it represents our customer, but also is our advertisement.\
 		</p>\
 		<h3><span class="far fa-gem"></span>Advantages of working with us:</h3>\
-		<img src="/img/quality.png2" class="quality"/>\
+		<img src="/img/quality2.png" class="quality"/>\
 		<ul>\
 			<li>We are providing free consultations.</li>\
 			<li>We are young company, so our prices are lower.</li>\

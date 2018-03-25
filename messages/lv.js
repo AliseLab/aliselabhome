@@ -24,7 +24,7 @@ exports.trans = {
             jo mājas lapa nav tikai mūsu klienta tēls, bet arī mūsu reklāma.\
 		</p>\
 		<h3><span class="far fa-gem"></span>Priekšrocības strādājot ar mums:</h3>\
-		<img src="/img/quality.png2" class="quality"/>\
+		<img src="/img/quality2.png" class="quality"/>\
 		<ul>\
 			<li>Mēs piedāvājam bezmaksas konsultācijas.</li>\
 			<li>Mēs esam jauns uzņēmums, tāpēc piedāvājam izdevīgākas pakalpojumu cenas.</li>\
