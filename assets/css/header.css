@@ -3,6 +3,7 @@ header > .first {
 	padding: 0.2em 6px;
 	color: white;
 	font-size: 1.2em;
+	position: relative;
 }
 
 header > .first > a {
@@ -85,5 +86,17 @@ img.logo {
 @media screen and (max-width: 740px) {
 	header > .second {
 		padding: 0;
+	}
+}
+
+.bch-accepted {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+@media screen and ( max-width: 550px ) {
+	.bch-accepted {
+		display: none;
 	}
 }
