@@ -88,15 +88,3 @@ img.logo {
 		padding: 0;
 	}
 }
-
-.bch-accepted {
-	position: absolute;
-	top: 0;
-	height: 100%;
-}
-
-@media screen and ( max-width: 550px ) {
-	.bch-accepted {
-		display: none;
-	}
-}
