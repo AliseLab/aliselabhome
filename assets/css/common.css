@@ -5,8 +5,13 @@
     src: url(/fonts/CenturyGothic.ttf);
 }
 
+@font-face {
+	font-family: "Myriad Pro Regular";
+	src: url(/fonts/MyriadProRegular.ttf);
+}
+
 * {
-	font-family: "Century Gothic";
+	font-family: "Myriad Pro Regular";
 	font-weight: 300;
 }
 
